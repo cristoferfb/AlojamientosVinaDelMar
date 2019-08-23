@@ -1,37 +1,32 @@
 <template lang="pug">
-    v-toolbar(flat dense :class="{'margin-desktop ': $vuetify.breakpoint.mdAndUp}")
-        v-toolbar-title.logo AVM
-        div.line.d-none.d-sm-flex.ml-10.mr-5
-        v-toolbar-items.d-none.d-sm-flex
-            v-btn(text)
-                span.menuOption Servicios
-            v-btn(text)
-                span.menuOption Ubicacion
-            v-btn(text)
-                span.menuOption Contacto
-        div.flex-grow-1
-        v-toolbar-items.d-none.d-sm-flex
-            v-btn(
-                text
-                href="https://www.facebook.com/Alojamientos-Viña-del-Mar-107616807270388"
-                target="_blank"
-            )
-                v-img(
-                    src="../assets/Facebook.png"
-                    max-width="16"
+    div
+        v-toolbar(flat :class="{'margin-desktop': $vuetify.breakpoint.mdAndUp}")
+            v-toolbar-title.logo AVM
+            div.line.d-none.d-sm-flex.ml-10.mr-5
+            v-toolbar-items.d-none.d-sm-flex
+                v-btn(text)
+                    span.menuOption Servicios
+                v-btn(text)
+                    span.menuOption Ubicacion
+                v-btn(text)
+                    span.menuOption Contacto
+            div.flex-grow-1
+            v-toolbar-items.d-none.d-sm-flex
+                v-btn(
+                    text
+                    href="https://www.facebook.com/Alojamientos-Viña-del-Mar-107616807270388"
+                    target="_blank"
                 )
-            v-btn(text)
-                v-img(
-                    src="../assets/Intagram.png"
-                    max-width="16"
-                )
+                    v-img(
+                        src="../assets/Facebook.png"
+                        max-width="16"
+                    )
+                v-btn(text)
+                    v-img(
+                        src="../assets/Intagram.png"
+                        max-width="16"
+                    )
 </template>
-
-<script>
-export default {
-
-}
-</script>
 
 <style>
     .logo {
@@ -56,7 +51,7 @@ export default {
     }
 
     .margin-desktop {
-        margin-left: 175px;
+        margin-left: 159px;
         margin-right: 180px;
     }
 </style>

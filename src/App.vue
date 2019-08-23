@@ -2,16 +2,17 @@
   v-app( style="background: white")
     nav-bar
     v-content
-      div
+      Hero
 </template>
 
 <script>
 import NavBar from './components/NavBar'
+import Hero from './components/Hero'
 
 export default {
   name: 'App',
   components: {
-    NavBar
+    NavBar, Hero
   }
 };
 </script>
