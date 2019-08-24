@@ -1,17 +1,25 @@
 <template lang="pug">
-    v-container.pa-0.ma-0
-        v-row
-            v-col(:class="{'margin-header-desktop': $vuetify.breakpoint.mdAndUp}" :style="{marginTop: windowHeight/2-230 + 'px'}" )
+    v-container(fluid)
+        v-row(dense)
+            v-col(
+                :class="{'padding-header-desktop': $vuetify.breakpoint.lgAndUp, 'text-center': $vuetify.breakpoint.smAndDown}"
+                :style="{marginTop: ($vuetify.breakpoint.mdAndUp) ? windowHeight/2-230 + 'px' : 100 + 'px'}"
+                lg="7" md="9" sm="12"
+            )
                 p.my-subheader ALOJAMIENTOS VIÑA DEL MAR
-                p(:class="{'header-desktop mt-n10': $vuetify.breakpoint.mdAndUp, 'header-mobile mt-n5': $vuetify.breakpoint.xsOnly}")
-                    span Cuartos amoblados&nbsp;
-                    span.redheader en
-                p(:class="{'header-desktop mt-n12': $vuetify.breakpoint.mdAndUp, 'header-mobile mt-n6': $vuetify.breakpoint.xsOnly}")
-                    span.redheader pleno centro&nbsp;
-                    span de viña
-                p.body Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            v-col().pr-0
-                img(src="../assets/image.png" width="100%")
+                p(:class="{'header-desktop mt-n10': $vuetify.breakpoint.mdAndUp, 'header-mobile mt-n6': $vuetify.breakpoint.smAndDown}").header.d-none.d-md-flex
+                    span(style="z-index:2") Cuartos amoblados&nbsp;
+                    span(style="z-index:2").redheader en
+                p(:class="{'header-desktop mt-n12': $vuetify.breakpoint.mdAndUp, 'header-mobile mt-n7': $vuetify.breakpoint.smAndDown}").header.d-none.d-md-flex
+                    span(style="z-index:2").redheader pleno centro&nbsp;
+                    span(style="z-index:2") de viña
+                p.header.header-mobile.d-md-none Cuartos amoblados en pleno centro de viña 
+                p.body.d-none.d-md-flex Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                v-btn(color="error" href="tel:56954959743")
+                    v-icon() mdi-phone
+                    span Llamar
+            v-col(lg="5" md="3").pr-0.d-none.d-md-flex
+                img(src="../assets/image.png" contain).ml-auto.d-flex
 </template>
 
 <script>
@@ -24,8 +32,8 @@ export default {
 
 
 <style>
-    .margin-header-desktop {
-        margin-left: 175px;
+    .padding-header-desktop {
+        padding-left: 175px !important;
     }
 
     .my-subheader {
@@ -35,20 +43,21 @@ export default {
         margin-bottom: 10px;
     }
 
-    .header-desktop {
+    .header {
         font-family: "Playfair Display";
-        font-size: 80px;
         font-weight: 400;
-        display: flex;
         color: #535b6c;
     }
 
-    .header-mobile {
-        font-family: "Playfair Display";
-        font-size: 30px;
-        font-weight: 400;
+    .header-desktop {
+        font-size: 80px;
+        z-index: 2;
         display: flex;
-        color: #535b6c;
+        white-space: nowrap;
+    }
+
+    .header-mobile {
+        font-size: 37px;
     }
 
     .redheader {

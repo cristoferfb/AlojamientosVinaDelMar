@@ -1,6 +1,6 @@
 <template lang="pug">
     div
-        v-toolbar(flat :class="{'margin-desktop': $vuetify.breakpoint.mdAndUp}")
+        v-toolbar(flat :class="{'margin-desktop': $vuetify.breakpoint.lgAndUp}")
             v-toolbar-title.logo AVM
             div.line.d-none.d-sm-flex.ml-10.mr-5
             v-toolbar-items.d-none.d-sm-flex
