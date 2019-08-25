@@ -4,8 +4,8 @@
             v-toolbar-title.logo AVM
             div.line.d-none.d-sm-flex.ml-10.mr-5
             v-toolbar-items.d-none.d-sm-flex
-                v-btn(text)
-                    span.menuOption Servicios
+                v-btn(text @click="$vuetify.goTo('#services')")
+                    span.menuOption Habitaciones
                 v-btn(text)
                     span.menuOption Ubicacion
                 v-btn(text)

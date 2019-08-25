@@ -1,21 +1,26 @@
 <template lang="pug">
-	div
+	div(id="services")
 		v-container.text-center
-			p.services-header.mb-0.pb-0 What we do
-			p.services-body.mt-0.pt-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			p.services-header.mb-0.pb-0 Habitaciones
+			p.services-body.ma-0.pa-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+			p.services-body et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 		v-row
-			v-col
-				v-carousel(continuous).d-flex
-					v-carousel-item.d-flex
-						v-img(src="../assets/img1.jpg").d-flex
-			v-col.pa-12
-				img(src="../assets/start.png")
-				p.services-subheader Brand Identity
-				p.services-subbody Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-				img(src="../assets/figure.png")
-				p.services-subheader Design
-				p.services-subbody Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-				
+			v-col(cols="12" lg="6").pb-0
+				v-card(flat).pa-12.pb-0
+					v-carousel(hide-delimiters )
+						v-carousel-item(v-for="n in 3" :key="n")
+							v-img(:src="'/galery/img'+n+'.jpg'" contain)
+			v-col(cols="12" lg="4" style="z-index: 10" :class="{'pt-0': $vuetify.breakpoint.mdAndDown}").pa-12
+				v-row
+					v-col( cols="12" md="6" lg="12")
+						img(src="../assets/start.png")
+						p.services-subheader Brand Identity
+						p.services-subbody Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					v-col( cols="12" md="6" lg="12")
+						img(src="../assets/figure.png")
+						p.services-subheader Design
+						p.services-subbody Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						
 </template>
 
 <style>
@@ -38,6 +43,7 @@
 		font-family: "Playfair Display";
 		font-size: 40px;
 		font-weight: 400;
+		z-index: 500 !important;
 	}
 
 	.services-subbody {
@@ -47,7 +53,9 @@
 		color: #9299a5;
 	}
 
-	.services {
-
+	.custom-carousel {
+		padding-left: 135px;
+		padding-right: 135px;
+		margin-top: 120px;
 	}
 </style>
