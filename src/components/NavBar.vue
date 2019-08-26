@@ -11,7 +11,7 @@
                 v-btn(text)
                     span.menuOption Contacto
             div.flex-grow-1
-            v-toolbar-items.d-none.d-sm-flex
+            v-toolbar-items
                 v-btn(
                     text
                     href="https://www.facebook.com/Alojamientos-Viña-del-Mar-107616807270388"

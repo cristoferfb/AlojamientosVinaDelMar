@@ -1,15 +1,15 @@
 <template lang="pug">
 	div(id="services")
 		v-container.text-center
-			p.services-header.mb-0.pb-0 Habitaciones
+			p(:class="{'services-header-mobile': $vuetify.breakpoint.mdAndDown}").services-header.mb-0.pb-0 Habitaciones
 			p.services-body.ma-0.pa-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
 			p.services-body et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 		v-row
-			v-col(cols="12" lg="6").pb-0
-				v-card(flat).pa-12.pb-0
-					v-carousel(hide-delimiters )
+			v-col(cols="12" lg="6" :class="{'pa-1': $vuetify.breakpoint.mdAndDown, 'pa-12': $vuetify.breakpoint.lgAndUp}")
+				v-card(flat)
+					v-carousel(hide-delimiters)
 						v-carousel-item(v-for="n in 3" :key="n")
-							v-img(:src="'/galery/img'+n+'.jpg'" contain)
+							v-img(:src="'/galery/img'+n+'.jpg'")
 			v-col(cols="12" lg="4" style="z-index: 10" :class="{'pt-0': $vuetify.breakpoint.mdAndDown}").pa-12
 				v-row
 					v-col( cols="12" md="6" lg="12")
@@ -27,8 +27,13 @@
 	.services-header {
 		color: #535b6c;
 		font-family: "Playfair Display";
-		font-size: 80px;
 		font-weight: 400;
+		font-size: 80px;
+	}
+
+	.services-header-mobile {
+		font-size: 40px;
+		margin-top: 30px;
 	}
 
 	.services-body {
