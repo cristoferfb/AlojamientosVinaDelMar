@@ -28,6 +28,6 @@
 	}
 
 	.mobile-contact {
-		font-size: 25px;
+		font-size: 20px;
 	}
 </style>
