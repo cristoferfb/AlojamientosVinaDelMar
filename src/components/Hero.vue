@@ -13,8 +13,8 @@
                 p(:class="{'header-desktop mt-n12': $vuetify.breakpoint.mdAndUp, 'header-mobile mt-n7': $vuetify.breakpoint.smAndDown}").header.d-none.d-md-flex
                     span(style="z-index:2").redheader pleno centro&nbsp;
                     span(style="z-index:2") de viña
-                p.header.header-mobile.d-md-none Cuartos amoblados en pleno centro de viña 
-                p.body.d-none.d-md-flex Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                p.header.header-mobile.d-md-none Cuartos amoblados en pleno centro de Viña
+                p.body.d-none.d-md-flex Alojamiento excelentemente ubicado en pleno centro de Viña a pasos de locomocion y puntos de interes relevantes de la ciudad, habitaciones equipadas, tv cable, wifi, agua caliente y mas.
                 v-btn(color="error" href="tel:56954959743")
                     v-icon() mdi-phone
                     span Llamar

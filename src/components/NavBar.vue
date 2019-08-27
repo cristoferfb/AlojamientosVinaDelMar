@@ -6,8 +6,8 @@
             v-toolbar-items.d-none.d-sm-flex
                 v-btn(text @click="$vuetify.goTo('#services')")
                     span.menuOption Habitaciones
-                v-btn(text)
-                    span.menuOption Ubicacion
+                v-btn(text @click="$vuetify.goTo('#ubication')")
+                    span.menuOption Ubicación
                 v-btn(text)
                     span.menuOption Contacto
             div.flex-grow-1
