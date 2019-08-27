@@ -17,7 +17,7 @@
 					v-col( cols="12" md="6" lg="12")
 						img(src="../assets/figure.png")
 						p.services-subheader Ademas
-						p.services-subbody Contamos con cocina completamente equipada de uso compartido, WiFi y dos baños compartidos con agua caliente.
+						p.services-subbody Dispones de cocina completamente equipada y baños de uso compartido con agua caliente. Wi-Fi Incluido. 
 						
 </template>
 
