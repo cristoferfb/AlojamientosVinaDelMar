@@ -8,7 +8,7 @@
                     span.menuOption Habitaciones
                 v-btn(text @click="$vuetify.goTo('#ubication')")
                     span.menuOption Ubicación
-                v-btn(text)
+                v-btn(text @click="$vuetify.goTo('#contact')")
                     span.menuOption Contacto
             div.flex-grow-1
             v-toolbar-items

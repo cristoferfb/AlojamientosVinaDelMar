@@ -1,6 +1,17 @@
 <template lang="pug">
     v-container(fluid)
-        v-row(dense)
+        v-row(
+            align="center"
+            justify="center" 
+            :style="{height: (windowHeight-52)+'px'}"
+        ).text-center.d-flex.d-md-none
+            v-col
+                p.my-subheader.mb-0 ALOJAMIENTOS VIÑA DEL MAR
+                p.header.header-mobile Cuartos amoblados en pleno centro de Viña
+                v-btn(color="error" href="tel:56954959743")
+                    v-icon(left) mdi-phone
+                    span Llamar
+        v-row(dense).d-none.d-md-flex
             v-col(
                 :class="{'padding-header-desktop': $vuetify.breakpoint.lgAndUp, 'text-center': $vuetify.breakpoint.smAndDown}"
                 :style="{marginTop: ($vuetify.breakpoint.mdAndUp) ? windowHeight/2-230 + 'px' : 100 + 'px'}"
@@ -15,9 +26,9 @@
                     span(style="z-index:2") de viña
                 p.header.header-mobile.d-md-none Cuartos amoblados en pleno centro de Viña
                 p.body.d-none.d-md-flex Alojamiento excelentemente ubicado en pleno centro de Viña a pasos de locomocion y puntos de interes relevantes de la ciudad, habitaciones equipadas, tv cable, wifi, agua caliente y mas.
-                v-btn(color="error" href="tel:56954959743")
+                v-btn(color="error" @click="$vuetify.goTo('#ubication')")
                     v-icon(left) mdi-phone
-                    span Llamar
+                    span Contactar
             v-col(lg="5" md="3").pr-0.d-none.d-md-flex
                 img(src="../assets/image.png" contain).ml-auto.d-flex
 </template>
@@ -32,6 +43,10 @@ export default {
 
 
 <style>
+    .mobile {
+        height: 100%
+    }
+
     .padding-header-desktop {
         padding-left: 175px !important;
     }
