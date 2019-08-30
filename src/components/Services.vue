@@ -6,7 +6,7 @@
 			v-col(cols="12" lg="6" :class="{'pa-0': $vuetify.breakpoint.mdAndDown, 'pa-12': $vuetify.breakpoint.lgAndUp}")
 				v-card(flat)
 					v-carousel(hide-delimiters)
-						v-carousel-item(v-for="n in 6" :key="n")
+						v-carousel-item(v-for="n in 8" :key="n")
 							v-img(:src="'/galery/img'+n+'.jpg'")
 			v-col(
 				cols="12"
