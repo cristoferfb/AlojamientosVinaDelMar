@@ -1,4 +1,6 @@
-# alojamientosvinadelmar
+# Alojamientos Viña del Mar
+
+![img1](/images/img1.jpg)
 
 ## Project setup
 ```
